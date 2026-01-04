@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neurohacking: Core System v2.0</title>
+    <title>Neurohacking: Core System</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -25,17 +25,17 @@
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
             <div class="text-2xl font-black tracking-tighter text-slate-800 underline decoration-blue-500 decoration-4 uppercase">Neurohacking</div>
-            <div class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Neuro-Intelligence Protocol</div>
+            <div class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Core Engine v2.0</div>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
     <header class="py-12 px-4 text-center">
-        <h1 class="text-4xl font-extrabold text-slate-800 mb-3 tracking-tight">Мониторинг нейроресурсов</h1>
-        <p class="text-slate-500 max-w-xl mx-auto text-sm italic">Авторский аналитический комплекс Neurohacking для оценки и коррекции биохимического потенциала.</p>
+        <h1 class="text-4xl font-extrabold text-slate-800 mb-3 tracking-tight">Замер нейроресурсов</h1>
+        <p class="text-slate-500 max-w-xl mx-auto text-sm italic">Авторская уникальная разработка мониторинга биохимических состояний от компании Neurohacking.</p>
     </header>
 
-    <!-- MAIN DASHBOARD -->
+    <!-- MAIN CONTENT -->
     <section class="max-w-6xl mx-auto px-4 pb-20">
         <div class="grid lg:grid-cols-12 gap-8">
             
@@ -43,72 +43,76 @@
             <div class="lg:col-span-7 bg-white rounded-3xl p-8 blue-glow">
                 <div class="space-y-10">
                     
+                    <!-- DOMAPINE -->
                     <div class="relative">
                         <div class="flex justify-between items-end mb-4">
                             <div>
                                 <h3 class="font-bold text-slate-800">Дофамин</h3>
-                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Мотивационный драйв</p>
+                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Ресурс мотивации и достижений</p>
                             </div>
                             <button onclick="openHelp('dopamine')" class="text-blue-600 text-xs font-bold hover:bg-blue-50 px-2 py-1 rounded transition">Калибровка</button>
                         </div>
                         <input type="range" id="i-dop" min="0" max="10" value="5" class="w-full" oninput="updateUI()">
-                        <div class="flex justify-between mt-2 text-[10px] font-black text-slate-300 uppercase">
-                            <span>0 Дефицит</span>
+                        <div class="flex justify-between mt-2 text-[10px] font-black text-slate-300">
+                            <span>0 ДЕФИЦИТ</span>
                             <span class="text-blue-600 text-lg" id="v-dop">5</span>
-                            <span>10 Пик</span>
+                            <span>10 ПРЕДЕЛ</span>
                         </div>
                     </div>
 
+                    <!-- OXYTOCIN -->
                     <div class="relative">
                         <div class="flex justify-between items-end mb-4">
                             <div>
                                 <h3 class="font-bold text-slate-800">Окситоцин</h3>
-                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Социальный капитал</p>
+                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Ресурс доверия и безопасности</p>
                             </div>
                             <button onclick="openHelp('oxytocin')" class="text-blue-600 text-xs font-bold hover:bg-blue-50 px-2 py-1 rounded transition">Калибровка</button>
                         </div>
                         <input type="range" id="i-oxy" min="0" max="10" value="5" class="w-full" oninput="updateUI()">
-                        <div class="flex justify-between mt-2 text-[10px] font-black text-slate-300 uppercase">
-                            <span>0 Охлаждение</span>
+                        <div class="flex justify-between mt-2 text-[10px] font-black text-slate-300">
+                            <span>0 ИЗОЛЯЦИЯ</span>
                             <span class="text-blue-600 text-lg" id="v-oxy">5</span>
-                            <span>10 Доверие</span>
+                            <span>10 БЛИЗОСТЬ</span>
                         </div>
                     </div>
 
+                    <!-- SEROTONIN -->
                     <div class="relative">
                         <div class="flex justify-between items-end mb-4">
                             <div>
                                 <h3 class="font-bold text-slate-800">Серотонин</h3>
-                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Иерархический статус</p>
+                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Ресурс статуса и уверенности</p>
                             </div>
                             <button onclick="openHelp('serotonin')" class="text-blue-600 text-xs font-bold hover:bg-blue-50 px-2 py-1 rounded transition">Калибровка</button>
                         </div>
                         <input type="range" id="i-ser" min="0" max="10" value="5" class="w-full" oninput="updateUI()">
-                        <div class="flex justify-between mt-2 text-[10px] font-black text-slate-300 uppercase">
-                            <span>0 Бессилие</span>
+                        <div class="flex justify-between mt-2 text-[10px] font-black text-slate-300">
+                            <span>0 БЕССИЛИЕ</span>
                             <span class="text-blue-600 text-lg" id="v-ser">5</span>
-                            <span>10 Уверенность</span>
+                            <span>10 ВЛИЯНИЕ</span>
                         </div>
                     </div>
 
+                    <!-- ENDORPHIN -->
                     <div class="relative">
                         <div class="flex justify-between items-end mb-4">
                             <div>
                                 <h3 class="font-bold text-slate-800">Эндорфин</h3>
-                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Физический антистресс</p>
+                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Ресурс физической легкости</p>
                             </div>
                             <button onclick="openHelp('endorphin')" class="text-blue-600 text-xs font-bold hover:bg-blue-50 px-2 py-1 rounded transition">Калибровка</button>
                         </div>
                         <input type="range" id="i-end" min="0" max="10" value="5" class="w-full" oninput="updateUI()">
-                        <div class="flex justify-between mt-2 text-[10px] font-black text-slate-300 uppercase">
-                            <span>0 Истощение</span>
+                        <div class="flex justify-between mt-2 text-[10px] font-black text-slate-300">
+                            <span>0 ТЯЖЕСТЬ</span>
                             <span class="text-blue-600 text-lg" id="v-end">5</span>
-                            <span>10 Эйфория</span>
+                            <span>10 ЭЙФОРИЯ</span>
                         </div>
                     </div>
 
                     <button onclick="executeAnalysis()" class="w-full py-5 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-100 uppercase tracking-widest text-sm">
-                        Сформировать протокол Neurohacking
+                        Запустить анализ Neurohacking
                     </button>
                 </div>
             </div>
@@ -121,10 +125,10 @@
                     </div>
                 </div>
 
-                <div class="bg-slate-900 text-slate-100 p-8 rounded-3xl min-h-[350px] relative overflow-hidden">
-                    <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-blue-400 mb-4 italic">Системный вердикт</h4>
+                <div class="bg-slate-900 text-slate-100 p-8 rounded-3xl min-h-[300px] relative overflow-hidden">
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-blue-400 mb-4">Нейро-Вердикт</h4>
                     <div id="analysis-output" class="text-sm leading-relaxed text-slate-300">
-                        Инициализируйте калибровку ресурсов. Система Neurohacking автоматически подберет корректирующий протокол на основе самого дефицитного показателя.
+                        Выполните калибровку слайдеров согласно вашему текущему состоянию. Система сформирует индивидуальный протокол восстановления ресурсов.
                     </div>
                 </div>
             </div>
@@ -134,16 +138,20 @@
     <!-- CALIBRATION MODAL -->
     <div id="help-modal" class="fixed inset-0 z-[100] bg-slate-900/50 hidden flex items-center justify-center p-4 modal-blur">
         <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl transform transition-all overflow-hidden" id="modal-content">
+            
+            <!-- HEADER (SPLIT DESIGN) -->
             <div class="flex h-32 w-full">
                 <div class="w-1/2 bg-slate-100 p-6 flex flex-col justify-center border-r border-slate-200">
-                    <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Маркер дефицита (0):</span>
+                    <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Критический минимум (0):</span>
                     <p id="text-zero" class="text-[11px] leading-tight text-slate-600 font-medium"></p>
                 </div>
                 <div class="w-1/2 bg-blue-600 p-6 flex flex-col justify-center">
-                    <span class="text-[9px] font-black text-blue-200 uppercase tracking-widest mb-1">Целевой вектор (10):</span>
+                    <span class="text-[9px] font-black text-blue-200 uppercase tracking-widest mb-1">Целевой максимум (10):</span>
                     <p id="text-ten" class="text-[11px] leading-tight text-white font-medium"></p>
                 </div>
             </div>
+            
+            <!-- BODY -->
             <div class="p-8">
                 <div class="flex justify-between items-start mb-6">
                     <div>
@@ -152,62 +160,64 @@
                     </div>
                     <button onclick="closeHelp()" class="text-slate-300 hover:text-slate-600 text-xl">✕</button>
                 </div>
+                
                 <div id="modal-body" class="space-y-4"></div>
-                <button onclick="closeHelp()" class="mt-8 w-full py-4 bg-slate-50 text-slate-500 font-bold rounded-xl hover:bg-slate-100 transition uppercase tracking-widest text-[10px]">Вернуться к замеру</button>
+                
+                <button onclick="closeHelp()" class="mt-8 w-full py-4 bg-slate-50 text-slate-500 font-bold rounded-xl hover:bg-slate-100 transition uppercase tracking-widest text-[10px]">Вернуться к панели</button>
             </div>
         </div>
     </div>
 
     <script>
+        // ЛОКАЛЬНАЯ БАЗА ДАННЫХ КАЛИБРОВКИ
         const neurohackingData = {
             dopamine: {
-                title: "Дофаминовая Цепь",
-                zero: "Блокировка поисковой активности, апатия, неспособность к планированию.",
-                ten: "Пиковая концентрация, азарт от процесса, высокая скорость принятия решений.",
+                title: "Дофаминовый профиль",
+                zero: "Острая апатия, полная потеря мотивационных ориентиров.",
+                ten: "Пиковая продуктивность, состояние 'туннельного зрения' на цель.",
                 levels: [
-                    "8-10: Режим доминирования. Высокая готовность к новым когнитивным вызовам.",
-                    "4-7: Стационарное состояние. Система работает в режиме поддержания текущих процессов.",
-                    "0-3: Критическое выгорание. Требуется немедленная декомпозиция целей."
+                    "8-10: Высокая готовность к сложным когнитивным нагрузкам.",
+                    "4-7: Стабильное функционирование без избыточного драйва.",
+                    "0-3: Режим энергосбережения. Краткосрочное выгорание."
                 ]
             },
             oxytocin: {
-                title: "Окситоциновая Связь",
-                zero: "Чувство социальной изоляции, тревога, отсутствие чувства опоры.",
-                ten: "Абсолютное доверие к среде, чувство глубокой связи с группой.",
+                title: "Окситоциновый профиль",
+                zero: "Социальная настороженность, чувство отсутствия опоры.",
+                ten: "Абсолютная интеграция в группу, чувство единства и тепла.",
                 levels: [
-                    "8-10: Высокий уровень эмоциональной безопасности. Комфорт в коммуникациях.",
-                    "4-7: Умеренный уровень эмпатии. Общение носит преимущественно функциональный характер.",
-                    "0-3: Острая потребность в поддержке. Высокая чувствительность к одиночеству."
+                    "8-10: Ресурс безопасности полностью восполнен.",
+                    "4-7: Контакт с миром нейтральный, без глубокого доверия.",
+                    "0-3: Социальный дефицит. Потребность в поддержке."
                 ]
             },
             serotonin: {
-                title: "Серотониновый Профиль",
-                zero: "Чувство некомпетентности, бессилие, болезненное сравнение не в свою пользу.",
-                ten: "Глубокая внутренняя уверенность, ощущение заслуженного влияния и уважения.",
+                title: "Серотониновый профиль",
+                zero: "Подавленное эго, чувство некомпетентности и бессилия.",
+                ten: "Спокойная уверенность в своем статусе и результатах.",
                 levels: [
-                    "8-10: Лидерское состояние. Спокойная трансляция авторитета без агрессии.",
-                    "4-7: Стабильная самооценка. Отсутствие зависимости от сиюминутного признания.",
-                    "0-3: Синдром самозванца. Страх социальной критики и игнорирования."
+                    "8-10: Состояние лидерства и уверенного влияния.",
+                    "4-7: Умеренное самопринятие без внешнего подтверждения.",
+                    "0-3: Обостренная чувствительность к критике."
                 ]
             },
             endorphin: {
-                title: "Эндорфиновая Разгрузка",
-                zero: "Физическая скованность, накопленный стресс, неспособность расслабиться.",
-                ten: "Эйфория от движений, мышечная радость, полное отсутствие телесного шума.",
+                title: "Эндорфиновый профиль",
+                zero: "Физическая перегрузка, накопленное телесное напряжение.",
+                ten: "Ощущение телесного полета и абсолютной легкости.",
                 levels: [
-                    "8-10: Ресурс физического восстановления на максимуме. Высокий порог стрессоустойчивости.",
-                    "4-7: Телесная норма. Дискомфорт отсутствует, но яркой эйфории не наблюдается.",
-                    "0-3: Соматический износ. Система работает на пределе физических возможностей."
+                    "8-10: Высокая болевая и стрессовая устойчивость.",
+                    "4-7: Тело в балансе. Физических ограничений не выявлено.",
+                    "0-3: Требуется немедленная разгрузка опорно-двигательного аппарата."
                 ]
             }
         };
 
         const localStrategies = {
-            dopamine: "<b>Протокол «Микро-Прогресс» (Коррекция дофамина):</b><br>Ваша нейронная сеть заблокировала выделение энергии, так как не видит прямой связи между усилием и результатом. Аналитическая система Neurohacking рекомендует: выделите одну примитивную задачу, выполнение которой займет не более 5 минут. Разделите ее на 3 микро-шага. Физически фиксируйте завершение каждого шага (галочка на бумаге или чек-лист). Этот метод принудительно активирует выброс дофамина, восстанавливая связь 'действие-награда', и дает мозгу сигнал, что ресурсы можно тратить снова. Повторяйте циклы по 20 минут с четким фокусом на конечном действии для стабилизации дофаминового фона.",
-            oxytocin: "<b>Протокол «Нейро-Альянс» (Коррекция окситоцина):</b><br>Снижение окситоцина сигнализирует мозгу об опасности со стороны среды, переводя систему в режим 'обороны'. Протокол Neurohacking: инициируйте качественный социальный контакт без цифровых посредников. Если это невозможно, используйте метод направленной эмпатии: отправьте короткое, но искреннее сообщение человеку, которому доверяете. Тактильная стимуляция (массаж или даже теплый душ) также эффективно имитирует чувство защиты на уровне рецепторов кожи. Это снизит уровень кортизола и вернет системе ощущение базовой безопасности, необходимое для восстановления когнитивной гибкости и социального ресурса.",
-            serotonin: "<b>Протокол «Статус-Вектор» (Коррекция серотонина):</b><br>Ваш мозг застрял в цикле болезненного сравнения, что блокирует чувство уверенности и инициативности. Согласно методологии Neurohacking, вам необходимо сместить фокус на личный прогресс и автономию. Выпишите 3 достижения за последние 7 дней, которые вы считаете своей исключительной заслугой. Не обесценивайте мелкие победы. Вспомните момент, когда вы чувствовали свою компетентность. Фиксация на своих достоинствах посылает нейронный сигнал о высокой социальной значимости, что нормализует уровень серотонина, убирает тревогу бессилия и восстанавливает естественное чувство гордости и контроля над жизнью.",
-            endorphin: "<b>Протокол «Соматический Сброс» (Коррекция эндорфина):</b><br>Критический дефицит эндорфина делает систему уязвимой к любым раздражителям и боли. Алгоритм Neurohacking: используйте принцип мышечной радости для активации природных опиатов. 10 минут легкой растяжки, йоги или искреннего, даже принудительного смеха способны запустить синтез эндорфина. Смех — самый мощный природный антистресс, создающий легкую встряску для диафрагмы и мозга. Также эффективен контрастный душ. Эти действия создают контролируемый микро-стресс, на который организм отвечает мощным компенсаторным выбросом эндорфина, мгновенно снимая накопленную тяжесть и стрессовую нагрузку.",
-            balance: "<b>ОПТИМАЛЬНЫЙ РЕЖИМ ФУНКЦИОНИРОВАНИЯ.</b> Все биохимические показатели находятся в пиковой зоне. Система Neurohacking фиксирует высокую пропускную способность нервной системы. Это критическое время для экспоненциального роста, принятия стратегических решений и активного социального взаимодействия. Ресурс позволяет работать на высокой интенсивности без риска истощения в краткосрочной перспективе. Используйте этот период для решения самых сложных задач, которые ранее откладывались из-за нехватки энергии или уверенности."
+            dopamine: "<b>Протокол: Микро-достижения.</b><br>Ваш дофаминовый уровень требует немедленного подтверждения успеха. Разделите ближайшую задачу на 5 примитивных действий. Выполнение первого из них запустит цепную реакцию восполнения ресурса.",
+            oxytocin: "<b>Протокол: Социальный резонанс.</b><br>Обнаружен дефицит окситоцина. Рекомендуется качественное взаимодействие: короткий звонок близкому человеку или 10 минут наблюдения за приятным контентом. Это восстановит чувство безопасности.",
+            serotonin: "<b>Протокол: Ретроспектива успеха.</b><br>Снижение серотонина блокирует уверенность. Сфокусируйтесь на 3 своих победах за неделю. Публичная или внутренняя фиксация достижений вернет баланс значимости.",
+            endorphin: "<b>Протокол: Соматическая разгрузка.</b><br>Критический уровень эндорфина. Сделайте цикл глубокого дыхания или легкую растяжку. Физический сброс напряжения — самый быстрый способ вернуть легкость системе."
         };
 
         let radarChart;
@@ -267,10 +277,10 @@
             const scores = { dopamine: d, oxytocin: o, serotonin: s, endorphin: e };
             const minKey = Object.keys(scores).reduce((a, b) => scores[a] < scores[b] ? a : b);
             
-            let resultHTML = `<span class="text-blue-400 font-black tracking-widest uppercase text-[10px] italic">СИСТЕМНЫЙ АНАЛИЗ NEUROHACKING</span><br><br>`;
+            let resultHTML = `<span class="text-blue-400 font-black tracking-widest uppercase text-xs italic">СИСТЕМНЫЙ ВЕРДИКТ NEUROHACKING</span><br><br>`;
             
-            if (d >= 9 && o >= 9 && s >= 9 && e >= 9) {
-                resultHTML += localStrategies.balance;
+            if (d >= 8 && o >= 8 && s >= 8 && e >= 8) {
+                resultHTML += "<b>ОПТИМАЛЬНЫЙ БАЛАНС.</b> Все когнитивные и эмоциональные ресурсы в норме. Это лучшее время для реализации амбициозных задач и социального влияния.";
             } else {
                 resultHTML += localStrategies[minKey];
             }
@@ -286,7 +296,7 @@
             document.getElementById('text-ten').innerText = data.ten;
             
             document.getElementById('modal-body').innerHTML = data.levels.map(l => 
-                `<p class="text-[11px] text-slate-600 border-l-2 border-blue-500 pl-3 py-1 bg-slate-50 leading-relaxed">${l}</p>`
+                `<p class="text-xs text-slate-600 border-l-2 border-blue-500 pl-3 py-1 bg-slate-50">${l}</p>`
             ).join('');
             
             document.getElementById('help-modal').classList.remove('hidden');
